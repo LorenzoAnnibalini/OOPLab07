@@ -31,27 +31,23 @@ public class MiniGUI {
      * Creates a new {@link MiniGUI}.
      */
     public MiniGUI() {
-        //final JPanel canvas = new JPanel();
+        //Parte 1
         final JPanel p1 = new JPanel();
-       //canvas.setLayout(new BorderLayout());
         p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
-    //final JButton write = new JButton("Print a random number on standard output");
         final JButton prova = new JButton("ciao");
+
+        //Parte 2
         final JTextField testo = new JTextField("Results");
         p1.add(testo,BorderLayout.NORTH);
-        // canvas.add(write, BorderLayout.CENTER);
         p1.add(prova);
-       //frame.setContentPane(canvas);
-       //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setContentPane(p1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        /*
-         * Handlers
-         */
+       
+        //Parte 3
         prova.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                System.out.println(randomGenerator.nextInt());
+                testo.setText(String.valueOf(randomGenerator.nextInt()));
             }
         });
     }
