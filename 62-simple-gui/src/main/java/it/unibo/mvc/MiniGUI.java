@@ -1,5 +1,6 @@
 package it.unibo.mvc;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -27,16 +28,22 @@ public class MiniGUI {
      * Creates a new {@link MiniGUI}.
      */
     public MiniGUI() {
-        final JPanel canvas = new JPanel();
-        canvas.setLayout(new BorderLayout());
-        final JButton write = new JButton("Print a random number on standard output");
-        canvas.add(write, BorderLayout.CENTER);
-        frame.setContentPane(canvas);
+        //final JPanel canvas = new JPanel();
+        final JPanel p1 = new JPanel();
+       //canvas.setLayout(new BorderLayout());
+        p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
+    //final JButton write = new JButton("Print a random number on standard output");
+        final JButton prova = new JButton("ciao");
+       // canvas.add(write, BorderLayout.CENTER);
+        p1.add(prova);
+       //frame.setContentPane(canvas);
+       //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setContentPane(p1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         /*
          * Handlers
          */
-        write.addActionListener(new ActionListener() {
+        prova.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
                 System.out.println(randomGenerator.nextInt());
@@ -78,7 +85,7 @@ public class MiniGUI {
      * Launches the application.
      *
      * @param args
-     *            ignored
+     *             ignored
      */
     public static void main(final String... args) {
         new MiniGUI().display();
