@@ -93,3 +93,32 @@ public class MiniGUI {
     }
 
 }
+
+/*
+ * Soluzione Prof con un nuovo JPanel Interno 
+ * 
+ * public MiniGUI() {
+        final JPanel canvas = new JPanel();
+        canvas.setLayout(new BorderLayout());
+        //Parte 1
+        final JPanel p1 = new JPanel();
+        p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
+        canvas.add(p1,BorderLayout.CENTER);
+        final JButton prova = new JButton("ciao");
+
+        //Parte 2
+        final JTextField testo = new JTextField("Results");
+        canvas.add(testo,BorderLayout.NORTH);
+        p1.add(prova);
+        frame.setContentPane(canvas);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       
+        //Parte 3
+        prova.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(final ActionEvent e) {
+                testo.setText(String.valueOf(randomGenerator.nextInt()));
+            }
+        });
+    }
+ */
