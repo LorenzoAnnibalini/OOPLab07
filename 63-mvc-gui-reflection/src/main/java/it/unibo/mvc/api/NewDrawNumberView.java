@@ -6,15 +6,16 @@ import it.unibo.mvc.api.DrawResult;
 
 public class NewDrawNumberView implements DrawNumberView {
 
+    private DrawNumberController controller;
+
     @Override
     public void setController(DrawNumberController observer) {
-        // TODO Auto-generated method stub
-        
+        this.controller=observer;
     }
 
     @Override
     public void start() {
-        // TODO Auto-generated method stub
+     //   this.controller.
         
     }
 
